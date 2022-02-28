@@ -18,8 +18,6 @@ class HistoryResponse extends BaseResponse {
   List<Datum>? data;
 
   factory HistoryResponse.fromJson(Map<String, dynamic> json) {
-    print("==============$json");
-    // print(json);
     return HistoryResponse(
       data: List<Datum>.from(json["data"].map((x) => Datum.fromJson(x))),
       status: json['errorStatus'] ?? true,

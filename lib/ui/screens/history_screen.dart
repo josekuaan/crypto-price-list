@@ -87,7 +87,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                               .priceChangePercentage24H!
                               .toString()
                               .split('');
-                          print(change);
+
                           var sign = change[0] != '-' ? '+' : '-';
                           var val = change[0] != '-'
                               ? change[0] +

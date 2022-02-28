@@ -14,7 +14,7 @@ class HistoryLoading extends HistoryState {
 }
 
 class HistorySuccessful extends HistoryState {
-  HistoryResponse historyResponse;
+  final HistoryResponse historyResponse;
 
   HistorySuccessful({
     required this.historyResponse,
