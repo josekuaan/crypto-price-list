@@ -18,15 +18,11 @@ class HistoryRepository {
       if (response.statusCode == 200) {
         print(response);
         List decodeResponse = jsonDecode(response.body);
-        // print("decodeResponse");
-        // print(decodeResponse);
 
         historyResponse = HistoryResponse.fromJson({"data": decodeResponse});
       }
     } catch (e) {
-      print(e);
-      print("decodeResponse");
-      // historyResponse = HistoryResponse(message: e.toString(), status: false);
+      throw Error();
     }
 
     return historyResponse;

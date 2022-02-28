@@ -76,6 +76,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   child: CircularProgressIndicator(),
                 );
               }
+
               if (state is HistorySuccessful) {
                 return state.historyResponse.data != null
                     ? ListView.separated(
@@ -193,6 +194,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
                         },
                       )
                     : Container();
+              }
+              if (state is HistoryError) {
+                return Center(child: Text(state.error.toString()));
               }
               return Container();
             }),
